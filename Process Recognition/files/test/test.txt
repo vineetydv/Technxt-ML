@@ -1,0 +1,10 @@
+Open    WoC Production Control
+Open    View Production Orders
+input   Search : {PRD PROP ID}
+click   Release
+click   Tab > Tasks
+click   Task ID
+click   Confirm
+input   Actual quanity : Open quanity
+Click   Save
+Click   Close

@@ -1,0 +1,9 @@
+{
+    "git.ignoreLimitWarning": true,
+    "python.autoComplete.extraPaths": [
+        true
+    ],
+    "editor.quickSuggestions": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}

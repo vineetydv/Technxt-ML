@@ -1,0 +1,25 @@
+Open    ACL120
+input   User : KJACOB
+input   Password : INIT9
+Open    WoC Sales orders
+Open    View New Sales orders
+input   Account : MC9785
+Click   Add row
+input   Product ID : MCF-0001
+input   quanity : 1 EA
+Click   Release order
+Get     {SO ID}
+
+Open    WoC Outbound logistics Control
+Open    View Customer Demand
+input   search : {SO ID}
+Click   Release
+
+Open    WoC Outbound logistics
+Open    View Delivery proposals
+input   search : {SO ID}
+click   post goods issue
+click   propose quantities
+click   Release
+Get     {OD ID}
+

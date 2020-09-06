@@ -1,0 +1,24 @@
+Open    ACL120
+input   User : KJACOB
+input   Password : INIT9
+Open    WoC Purchase Requests and orders
+Open    View New Purchase order
+input   Supplier : MC2000
+Click   Add row
+input   Product ID : MCF-0001
+input   quanity : 1 EA
+input   Ship to location : MC64000
+input   Gross Price : 1
+Click   order
+Get     {PO ID}
+
+Open    WoC Inbound logistics
+Open    View Purchase orders
+input   search : {PO ID}
+Click   post goods receipt
+input   Delivery Notification ID
+click   propose quantities
+click   Save and Close
+Get     {CID ID}
+
+

@@ -1,0 +1,59 @@
+Open    ACL120
+input   User : KJACOB
+input   Password : INIT9
+Open    WoC Supply Planning
+Open    View New Planning Proposal 
+input   Product ID : CAR-01
+input   quanity : 1 EA
+input   Planning Area ID : MC64000
+Click   Save and Close
+Get     {PRD PROP ID}
+
+Open    WoC Supply Control
+Open    View Process Production Proposals
+input   Search : {PRD PROP ID}
+click   Release
+
+
+Open    WoC Production Control
+Open    View Production Requests
+input   Search : {PRD PROP ID}
+click   Create Order
+
+Open    WoC Production Control
+Open    View Production Orders
+input   Search : {PRD PROP ID}
+click   Release
+click   Tab > Tasks
+click   Task ID
+click   Confirm
+input   Actual quanity : Open quanity
+Click   Save
+Click   Close
+click   Task ID
+click   Confirm
+input   Actual quanity : Open quanity
+Click   Save
+Click   Close
+
+
+
+
+
+
+input   Product ID : CAR-01
+input   quanity : 1 EA
+input   Planning Area ID : MC64000
+Click   Save and Close
+Get     {PRD PROP ID}
+
+Open    WoC Inbound logistics
+Open    View Purchase orders
+input   search : {PO ID}
+Click   post goods receipt
+input   Delivery Notification ID
+click   propose quantities
+click   Save and Close
+Get     {CID ID}
+
+

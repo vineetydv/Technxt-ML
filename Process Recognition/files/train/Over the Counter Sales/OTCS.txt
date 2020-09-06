@@ -1,0 +1,17 @@
+Open    ACL120
+input   User : KJACOB
+input   Password : INIT9
+Open    WoC Over-the-Counter-Sales
+Open    View New Over-the-Counter-Sales
+input   Account : MC9785
+Click   Add row
+input   Product ID : MCF-0001
+input   quanity : 1 EA
+input   Ship from location : MC64920
+Click   Invoice
+Get     {OTCS ID}
+
+Open    WoC Over-the-Counter-Sales
+Open    View Outbound Delivery
+input   search : {OTCS ID}
+
