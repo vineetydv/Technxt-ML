@@ -1,0 +1,8 @@
+---
+applications:
+- name: ErrorClassApp
+  host: ErrorClassApp
+  memory: 512M
+  disk_quota: 1028M
+  timeout: 60
+  buildpack: python_buildpack
